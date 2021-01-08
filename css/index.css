@@ -1,0 +1,538 @@
+/* 全站共用樣式 */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: #324255;
+}
+
+.wrapper {
+    max-width: 960px;
+    padding: 10px 30px;
+    margin: 0 auto 50px;
+    border-radius: 5%;
+    background-color: #ffffff;
+    font-size: 1rem;
+}
+
+h3 {
+    margin-top: 0;
+    color: #324255;
+}
+
+p {
+    margin: 0;
+    color: rgb(0, 0, 0);
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    transition: .3s;
+    outline-style: none;
+}
+
+@media screen and (max-width:800px) {
+    .wrapper {
+        border-radius: 0%;
+        background-color: #ffffff;
+    }
+    h3 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 105px;
+    padding: 0 50px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.logo {
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.mobileMenuBtn {
+    width: 35px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+.mobileMenuLine {
+    position: absolute;
+    border-radius: 10px;
+    width: 35px;
+    height: 5px;
+    background-color: #324255;
+}
+
+.mobileMenuLineTop {
+    top: 0;
+}
+
+.mobileMenuLineCenter {
+    top: 10px;
+    position: absolute;
+}
+
+.mobileMenuLineCenter::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    border-radius: 10px;
+    width: 35px;
+    height: 5px;
+    background-color: #324255;
+}
+
+.menuCkb {
+    display: none;
+}
+
+input:checked~.mobileMenu {
+    display: block;
+    transition: .3s;
+}
+
+.mobileMenu {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    top: 49px;
+    right: -50px;
+    background-color: #324255;
+    color: rgb(86, 226, 133);
+    list-style-type: none;
+    text-align: center;
+    display: none;
+    z-index: 99;
+}
+
+.mobileList {
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+}
+
+.mobileList a {
+    padding: 20px;
+    display: block;
+    color: #ffff;
+}
+
+.mobileList a:hover {
+    background-color: #f2a147;
+}
+
+@media screen and (max-width:800px) {
+    /* 手機版選單顯示 */
+    .mobileMenuBtn {
+        display: block;
+    }
+    /* 桌機版隱藏 */
+    .webMenu {
+        display: none;
+    }
+}
+
+
+/* 活動消息 */
+
+.news {
+    margin: 0 auto;
+    margin-top: 105px;
+    line-height: 50px;
+    text-align: center;
+    color: #ffff;
+}
+
+
+/* 各身份登入按鈕 */
+
+.identityContainer {
+    margin: 50px 0;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.identity {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 20px solid #324255;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.identityImg {
+    height: 60px;
+    width: 60px;
+}
+
+.identity:hover {
+    transform: translate(0, 5px);
+    box-shadow: 0px 4px 2px #aaa;
+}
+
+
+/* 網站新手指南、教學 */
+
+.btnGroup {
+    display: flex;
+}
+
+.guideBtn {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #f2a147;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 1.25rem;
+}
+
+.guideBtn:hover {
+    background-color: #f2a247ab;
+}
+
+@media screen and (max-width:800px) {
+    .identityContainer {
+        flex-direction: column;
+    }
+    .identityMargin {
+        margin-bottom: 20px;
+    }
+    .news {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .identity:hover {
+        transform: translate(0, 0px);
+        box-shadow: none;
+    }
+    .btnGroup {
+        display: initial;
+    }
+    .guideBtn {
+        margin: 20px 0;
+    }
+}
+
+
+/* table：外誆 */
+
+.shareholderInfoContent {
+    padding: 30px;
+    background-color: rgb(219, 219, 219);
+    border-radius: 5px;
+}
+
+.shareholderInfo {
+    margin: 20px auto;
+}
+
+
+/* table：排序、搜尋 */
+
+.searchContainer {
+    margin-bottom: 20px;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+select,
+input {
+    max-width: 150px;
+    height: 30px;
+    border: 1px solid transparent;
+    outline-style: none;
+}
+
+.selectBtn {
+    height: 30px;
+    margin-right: 30px;
+}
+
+.selectBtn:hover {
+    background-color: rgb(156, 156, 156);
+}
+
+
+/*table：內容 */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 10px;
+    background-color: #ffff;
+}
+
+thead {
+    width: 100%;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid rgb(189, 189, 189);
+}
+
+.firstColumn {
+    text-align: left;
+}
+
+.externalLink {
+    color: #de5858;
+    text-align: left;
+}
+
+.mobileTitle {
+    display: none;
+}
+
+
+/*table：分頁 */
+
+.pagination {
+    width: 100%;
+    padding: 0;
+    margin: 20px 0 0 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pageNumber {
+    display: flex;
+}
+
+.pageNumber li {
+    margin: 0 10px;
+}
+
+@media screen and (max-width:800px) {
+    .shareholderInfoContent {
+        padding: 10px;
+        background-color: rgb(219, 219, 219);
+        border-radius: 0px;
+    }
+    .searchBar {
+        margin-bottom: 20px;
+        display: block;
+        text-align: left;
+    }
+    .searchBar div {
+        margin-bottom: 20px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        display: block;
+        position: relative;
+        background-color: transparent;
+    }
+    tbody {
+        display: block;
+    }
+    .meetInfoList {
+        display: block;
+        background-color: #fff;
+        border: 1px solid rgb(189, 189, 189);
+        margin-bottom: 10px;
+    }
+    td {
+        display: block;
+        border: none;
+        padding: 5px 15px;
+    }
+    .meetInfoTitle {
+        display: none;
+    }
+    .mobileTitle {
+        display: inline-block;
+    }
+    .pagination {
+        display: block;
+        padding: 0;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .pageNumber {
+        margin: 20px 0 10px 0;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:400px) {
+    select,
+    input {
+        min-width: 150px;
+    }
+}
+
+
+/* 公開資訊站等功能按鈕 */
+
+.webMap {
+    width: 100%;
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.webFunction {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.webFunctionBtn {
+    width: 30%;
+    height: 50px;
+    margin: 10px 0;
+    color: #fff;
+    background-color: #de5858;
+    border-radius: 5px;
+    line-height: 50px;
+    font-size: 1.25rem;
+}
+
+.webFunctionBtn:hover {
+    background-color: #de585850;
+}
+
+.relatedWebsites {
+    width: 25%;
+    margin: 0 0 0 30px;
+    padding: 0 10px;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.moreBtn {
+    color: #de5858;
+    text-align: end;
+}
+
+@media screen and (max-width:768px) {
+    .webMap {
+        display: initial;
+    }
+    .webFunction {
+        margin: 0 auto;
+    }
+    .webFunctionBtn {
+        width: 45%;
+    }
+    .relatedWebsites {
+        margin: 20px auto;
+        width: 100%;
+        text-align: center;
+        font-size: 1.25rem;
+    }
+    .moreBtn {
+        text-align: center;
+    }
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #ffff;
+    padding: 0 50px;
+}
+
+.contactInfo {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contactInfo p {
+    margin: 10px 0;
+}
+
+.copyright {
+    display: flex;
+}
+
+.copyright img {
+    width: 150px;
+}
+
+@media screen and (max-width:800px) {
+    footer {
+        padding: 50px;
+        margin: 0 auto;
+    }
+    .contactInfo {
+        display: initial;
+    }
+    .copyright {
+        margin: 20px 0;
+    }
+}

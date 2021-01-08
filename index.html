@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+
+    <!-- 網站樣式 -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- 字體 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/ic_tdcc_logo.svg" alt="">
+        </div>
+
+        <div class="navbar">
+            <!-- 手機版選單 -->
+            <input class="menuCkb" type="checkbox" id="mobileMenuBtn">
+            <label for="mobileMenuBtn">
+                <div class="mobileMenuBtn">
+                    <div class="mobileMenuLine mobileMenuLineTop"></div>
+                    <div class="mobileMenuLine mobileMenuLineCenter"></div>
+                </div>
+            </label>
+            <ul class="mobileMenu">
+                <li class="mobileList"><a href="">首頁</a></li>
+                <li class="mobileList"><a href="">關於我們</a></li>
+                <li class="mobileList"><a href="">活動消息</a></li>
+                <li class="mobileList"><a href="">統計專區</a></li>
+                <li class="mobileList"><a href="">Ｑ＆Ａ</a></li>
+                <li class="mobileList"><a href="">關於我們</a></li>
+                <li class="mobileList"><a href="">登入</a></li>
+            </ul>
+
+            <!-- 桌機版選單 -->
+            <ul class="webMenu">
+                <li><a href="">首頁</a></li>｜
+                <li><a href="">關於我們</a></li>｜
+                <li><a href="">活動消息</a></li>｜
+                <li><a href="">統計專區</a></li>｜
+                <li><a href="">Ｑ＆Ａ</a></li>｜
+                <li><a href="">關於我們</a></li>｜
+                <li><a href="">登入</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="news">活動消息：<span>系統維護中，請於7:00~24:00進行投票！Scheduled system maintenance! Voting Hours : 7:00~24:00</span></div>
+
+    <div class="wrapper">
+        <main>
+            <section class="identityContainer">
+                <div class="identity identityMargin">
+                    <p>一般股東</p>
+                    <img class="identityImg" src="img/networking.svg" alt="">
+                </div>
+
+                <div class="identity identityMargin">
+                    <p>發行公司、<br>股務代理機構</p>
+                    <img class="identityImg" src="img/handshake.svg" alt="">
+                </div>
+
+                <div class="identity">
+                    <p>專業機構法人</p>
+                    <img class="identityImg" src="img/office.svg" alt="">
+                </div>
+            </section>
+
+            <div class="btnGroup">
+                <div class="btn guideBtn">新手上路</div>
+                <div class="btn guideBtn">首次使用設定</div>
+            </div>
+
+            <section class="shareholderInfo">
+                <div class="shareholderInfoContent">
+                    <h3>股東會資訊</h3>
+                    <div class="searchContainer">
+                        <div class="searchBar">
+                            <div>
+                                <label for="orderType">資料排序方式 : </label>
+                                <select name="orderType" id="">
+                                <option value="0" >請選擇排序方式</option>
+                              <optgroup label="依股東會日期">
+                                <option value="0">由遠至近排序</option>
+                                <option value="1">由近至遠排序</option>
+                              </optgroup>
+
+                              <optgroup label="依投票日期">
+                                <option value="3">由遠至近排序</option>
+                                <option value="4">由近至遠排序</option>
+                              </optgroup>
+
+                              <optgroup label="依證券代號">
+                                <option value="5">由小至大排序</option>
+                                <option value="6">由大至小排序</option>
+                              </optgroup>
+                            </select>
+                                <button class="btn selectBtn">查詢</button>
+                            </div>
+
+                            <div>
+                                <label for="orderType">搜尋股東會 : </label>
+                                <input type="text" placeholder="請輸入關鍵字">
+                                <button class="btn selectBtn">查詢</button>
+                            </div>
+                        </div>
+
+                        <table>
+                            <thead>
+                                <tr class="meetInfoTitle">
+                                    <th>證券代號/名稱</th>
+                                    <th>股東會日期</th>
+                                    <th>投票起訖日期</th>
+                                    <th>服務單位</th>
+                                    <th>聯絡電話</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="meetInfoList">
+                                    <td> <span class="mobileTitle">證券代號/名稱：</span><a class="externalLink" target="_blank" href="https://www.uniplus.com.tw/">5381/合正</a></td>
+                                    <td><span class="mobileTitle">股東會日期：</span>110/01/29</td>
+                                    <td><span class="mobileTitle">投票起訖日期：</span>110/01/14 ~ 110/01/26</td>
+                                    <td><span class="mobileTitle">服務單位：</span><a class="externalLink" target="_blank" href="https://www.taishinbank.com.tw/TSB/personal/">台新銀行</a></td>
+                                    <td><span class="mobileTitle">聯絡電話：</span>(02)7700-3938</td>
+                                </tr>
+                                <tr class="meetInfoList">
+                                    <td> <span class="mobileTitle">證券代號/名稱：</span><a class="externalLink" target="_blank" href="https://www.uniplus.com.tw/">5381/合正</a></td>
+                                    <td><span class="mobileTitle">股東會日期：</span>110/01/29</td>
+                                    <td><span class="mobileTitle">投票起訖日期：</span>110/01/14 ~ 110/01/26</td>
+                                    <td><span class="mobileTitle">服務單位：</span><a class="externalLink" target="_blank" href="https://www.taishinbank.com.tw/TSB/personal/">台新銀行</a></td>
+                                    <td><span class="mobileTitle">聯絡電話：</span>(02)7700-3938</td>
+                                </tr>
+                                <tr class="meetInfoList">
+                                    <td> <span class="mobileTitle">證券代號/名稱：</span><a class="externalLink" target="_blank" href="https://www.uniplus.com.tw/">5381/合正</a></td>
+                                    <td><span class="mobileTitle">股東會日期：</span>110/01/29</td>
+                                    <td><span class="mobileTitle">投票起訖日期：</span>110/01/14 ~ 110/01/26</td>
+                                    <td><span class="mobileTitle">服務單位：</span><a class="externalLink" target="_blank" href="https://www.taishinbank.com.tw/TSB/personal/">台新銀行</a></td>
+                                    <td><span class="mobileTitle">聯絡電話：</span>(02)7700-3938</td>
+                                </tr>
+                                <tr class="meetInfoList">
+                                    <td> <span class="mobileTitle">證券代號/名稱：</span><a class="externalLink" target="_blank" href="https://www.uniplus.com.tw/">5381/合正</a></td>
+                                    <td><span class="mobileTitle">股東會日期：</span>110/01/29</td>
+                                    <td><span class="mobileTitle">投票起訖日期：</span>110/01/14 ~ 110/01/26</td>
+                                    <td><span class="mobileTitle">服務單位：</span><a class="externalLink" target="_blank" href="https://www.taishinbank.com.tw/TSB/personal/">台新銀行</a></td>
+                                    <td><span class="mobileTitle">聯絡電話：</span>(02)7700-3938</td>
+                                </tr>
+                                <tr class="meetInfoList">
+                                    <td> <span class="mobileTitle">證券代號/名稱：</span><a class="externalLink" target="_blank" href="https://www.uniplus.com.tw/">5381/合正</a></td>
+                                    <td><span class="mobileTitle">股東會日期：</span>110/01/29</td>
+                                    <td><span class="mobileTitle">投票起訖日期：</span>110/01/14 ~ 110/01/26</td>
+                                    <td><span class="mobileTitle">服務單位：</span><a class="externalLink" target="_blank" href="https://www.taishinbank.com.tw/TSB/personal/">台新銀行</a></td>
+                                    <td><span class="mobileTitle">聯絡電話：</span>(02)7700-3938</td>
+                                </tr>
+                                <tr class="meetInfoList">
+                                    <td> <span class="mobileTitle">證券代號/名稱：</span><a class="externalLink" target="_blank" href="https://www.uniplus.com.tw/">5381/合正</a></td>
+                                    <td><span class="mobileTitle">股東會日期：</span>110/01/29</td>
+                                    <td><span class="mobileTitle">投票起訖日期：</span>110/01/14 ~ 110/01/26</td>
+                                    <td><span class="mobileTitle">服務單位：</span><a class="externalLink" target="_blank" href="https://www.taishinbank.com.tw/TSB/personal/">台新銀行</a></td>
+                                    <td><span class="mobileTitle">聯絡電話：</span>(02)7700-3938</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <ul class="pagination">
+                            <div class="totalPag">
+                                <li>共計： 105 筆 </li>
+                            </div>
+                            <div class="pageNumber">
+                                <li><a href="">◀</a></li>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li><a href="">5</a></li>
+                                <li><a href="">▶</a></li>
+                            </div>
+                        </ul>
+                    </div>
+            </section>
+
+            <section class="webMap">
+                <div class="webFunction">
+                    <a class="btn webFunctionBtn" href="">公開資訊觀測站</a>
+                    <a class="btn webFunctionBtn" href="">股東會法規查詢</a>
+                    <a class="btn webFunctionBtn" href="">股務機構查詢</a>
+                    <a class="btn webFunctionBtn" href="">股東e票通APP安裝</a>
+                    <a class="btn webFunctionBtn" href="">股東會電子投票專區</a>
+                    <a class="btn webFunctionBtn" href="">股東e票通抽獎活動</a>
+                </div>
+                <div class="relatedWebsites">
+                    <p>相關網站：</p>
+                    <a href="">金融監督管理委員會</a>
+                    <a href="">臺灣證券交易所</a>
+                    <a href="">臺灣期貨交易所</a>
+                    <a href="">證券櫃檯買賣中心</a>
+                    <a href="">臺灣集保結算所</a>
+                    <a class="moreBtn" href="">more</a>
+                </div>
+            </section>
+        </main>
+        </div>
+
+        <footer>
+            <div class="contactInfo">
+                <div class="infoPart01">
+                    <p>聯絡我們</p>
+
+                    <p>週一至週五</p>
+                    <p>08:00~20:00 電話：(02)3789-7555</p>
+                    <p>08:30~20:30 電話：(02)2514-1125、(02)2514-1242</p>
+                </div>
+
+                <div class="infoPart02">
+                    <p>E-Mail:tdcc@tdcc.com.tw</p>
+                    <p>台北市復興北路363號11樓</p>
+                </div>
+
+                <div class="copyright">
+                    <img src="img/iso2700.gif" alt="">
+                </div>
+
+                <div class="copyright">
+                    <img src="img/dpMark.gif" alt="">
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
